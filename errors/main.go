@@ -54,6 +54,7 @@ func raizQuadrada(x float64) (float64, error) {
 // }
 
 // Comparando tipos de erros (Errors.is e Errors.As).
+
 var ErrorNotFound = errors.New("not found")
 
 // func foo() error { return ErrorNotFound}
@@ -68,9 +69,9 @@ var ErrorNotFound = errors.New("not found")
 // 	fmt.Println("Caiu fora do if de error not found")
 // }
 
+
+
 //  Para o caso de error criado a partir da implementação da interface Error.
-
-
 func foo() error { return SqrtError{msg: "foo"} }
  func main() {
 	err := foo()
